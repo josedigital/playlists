@@ -1,0 +1,1215 @@
+@import "reveal.css";
+/*	--------------------------------------------------
+	:: Variables
+	-------------------------------------------------- */
+/* text shadow - define everything */
+/* text shadow - 1px, 1px, 0, define only color */
+/* Main Colors */
+/*grays*/
+/* Font Sizes */
+/* Tabs */
+/* Forms */
+/* form elemnts width */
+/* Opacity */
+/* Rounded Corners + Border Radius */
+/* Gradients */
+/* Animations */
+/* Drop shadows */
+/* Clearfix for clearing floats like a boss */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+/*	--------------------------------------------------
+	:: Variables
+	-------------------------------------------------- */
+/* text shadow - define everything */
+/* text shadow - 1px, 1px, 0, define only color */
+/* Main Colors */
+/*grays*/
+/* Font Sizes */
+/* Tabs */
+/* Forms */
+/* form elemnts width */
+/* Opacity */
+/* Rounded Corners + Border Radius */
+/* Gradients */
+/* Animations */
+/* Drop shadows */
+/* Clearfix for clearing floats like a boss */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+/*
+	* Main stylesheet: contains CSS normalization, base styles, typography with a vertical rhythm and some mobile-first media queries
+
+	* Credit is left inline
+	* Much content and inspiration was taken from the normalize.css project:
+	* http://necolas.github.com/normalize.css/ and https://github.com/jonathantneal/normalize.css
+
+	* The media queries included in here are only placeholder. You should modify them as your content requires
+
+	* Across this document we use safe CSS hacks to target IE6 and IE7
+	* Selectors beggining with an underscore (_selector: property) target only IE6.
+	* Selectors beggining with an asterisk (*selector: property) target only IE6 and IE7.
+*/
+/* ==========================================================================================> DEFAULT STYLES */
+/* Styles for all viewport widths and print */
+/* ============================================================> HTML5 ELEMENTS DISPLAY */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+dialog {
+  display: block;
+}
+audio[controls],
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/* ============================================================> BASE STRUCTURE */
+/*
+	* The body will work like a 'div#wrapper' (for this to work, the 'body' needs to have a set width)
+
+	* To add a background to the PAGE, set it in the 'html' element
+	* To add a background to the WRAPPER, set it in the 'body' element
+*/
+html {
+  height: 100%;
+  font-size: 100%;
+  overflow-y: scroll;
+  /* Force a scrollbar in non-IE */
+
+  -webkit-text-size-adjust: 100%;
+  /* Remove iOS text size adjust without disabling user zoom */
+
+}
+body {
+  font-size: 62.5%;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, serif;
+  color: #444444;
+  background: #f2f2f2;
+  -webkit-text-size-adjust: none;
+  line-height: 1.5;
+  margin: 0 auto;
+  min-height: 100%;
+}
+/* Add more tags as your project needs */
+p,
+blockquote,
+q,
+pre,
+address,
+hr,
+code,
+samp,
+dl,
+ol,
+ul,
+form,
+table,
+fieldset,
+menu,
+h4,
+h5,
+h6,
+img {
+  margin: 0 0 1.625em;
+}
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0;
+}
+hr.line {
+  border: solid #bbb;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 1px;
+}
+hr.clear {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  clear: both;
+}
+::selection {
+  background: #deff44;
+}
+::-moz-selection {
+  background: #d2381f;
+  color: #fff;
+}
+::-webkit-selection {
+  background: #d2381f;
+  color: #fff;
+}
+/* ============================================================> HEADINGS AND SMALL */
+/*
+	* Font sizes are based on the golden ratio of 16
+	* See this for the modular scale: ow.ly/5jGl6
+	* Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across elements 
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  color: #111111;
+  /* More contrast than body text for headings */
+
+  margin: 0 0 .25em 0;
+}
+h1 {
+  font-size: 46px;
+  font-size: 4.6em;
+}
+h2 {
+  font-size: 35px;
+  font-size: 3.5em;
+}
+h3 {
+  font-size: 28px;
+  font-size: 2.8em;
+}
+h4 {
+  font-size: 21px;
+  font-size: 2.1em;
+}
+h5 {
+  font-size: 18px;
+  font-size: 1.8em;
+}
+h6 {
+  font-size: 15px;
+  font-size: 1.5em;
+}
+small {
+  font-size: 1em;
+  /* 10px */
+
+  margin: 0 0 2.6em;
+}
+/* ============================================================> GENERAL TYPOGRAPHY */
+p,
+li {
+  font-size: 13px;
+  font-size: 1.3em;
+  line-height: inherit;
+}
+/* ============================================================> PREFORMATTED TEXT AND CODE */
+/* Allows line wrapping of 'pre' */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre,
+code,
+kbd,
+samp {
+  font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, 'Courier New', Courier, monospace;
+}
+/* ============================================================> TABLES */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+}
+tr,
+th,
+td {
+  padding-right: 1.625em;
+  border-bottom: 0 solid #333;
+}
+/* ============================================================> FORMS */
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+legend {
+  *margin-left: -7px;
+}
+button,
+input,
+select,
+textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/* ============================================================> QUOTES */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+blockquote,
+q,
+cite {
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1.625em;
+  border-left: 3px solid #ccc;
+}
+blockquote > p {
+  padding: 0;
+}
+/* ============================================================> LISTS */
+ul,
+ol {
+  list-style-position: inside;
+  padding: 0;
+}
+li ul,
+li ol {
+  margin: 0 1.625em;
+}
+dl dd {
+  margin-left: 1.625em;
+}
+/* ============================================================> LINKS */
+a {
+  text-decoration: none;
+  outline: none;
+  color: #6d9a92;
+}
+a:hover {
+  color: #ffffff;
+}
+a:focus {
+  outline: thin dotted;
+}
+/* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover,
+a:active {
+  outline: none;
+}
+/* ============================================================> VISUAL MEDIA */
+figure {
+  margin: 0;
+}
+img,
+object,
+embed,
+video {
+  max-width: 100%;
+  /* Consider this first: unstoppablerobotninja.com/entry/fluid-images/ */
+
+  _width: 100%;
+  /* IE6 doesn't support max-width, so we just use width: 100%. If the image/video is smaller than the container, change 100% to an absolute value */
+
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  /* Improve IE's resizing of images: css-tricks.com/ie-fix-bicubic-scaling-for-images */
+
+}
+/* Corrects overflow displayed oddly in IE9 */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ============================================================> ABBREVIATIONS */
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #333;
+  cursor: help;
+}
+/* ============================================================> MARKED/INSERTED/DELETED TEXT */
+ins,
+mark {
+  text-decoration: none;
+}
+mark {
+  background: #ff0;
+}
+ins {
+  background: #ff9;
+}
+del {
+  text-decoration: line-through;
+}
+/* ============================================================> OTHERS */
+strong,
+b,
+dt {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+var,
+address {
+  font-style: normal;
+}
+/* Position 'sub' and 'sup' without affecting line-height: gist.github.com/413930 */
+sub,
+sup {
+  font-size: 0.625em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ============================================================> HELPER CLASSES */
+/*
+	* Micro clearfix hack
+	* More semantically titled with the class name 'group'
+
+	* Source: nicolasgallagher.com/micro-clearfix-hack/
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  *zoom: 1;
+}
+/* #Buttons
+================================================== */
+/* Button variables */
+/* button background ------------------- */
+.buttonbackground {
+  /* .gradient(@buttonbackgroundcolor, @buttongraddark, @buttongradlight); */
+
+  background: #eeeeee;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(0, 0, 0, 0.2)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* Opera11.10+ */
+
+  background: -ms-linear-gradient(top, r rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* W3C */
+
+}
+/* button border ------------------- */
+.buttonborder {
+  border: 1px solid #aaaaaa;
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+}
+/* button font ------------------- */
+a.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  /* .gradient(@buttonbackgroundcolor, @buttongraddark, @buttongradlight); */
+
+  background: #eeeeee;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(0, 0, 0, 0.2)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* Opera11.10+ */
+
+  background: -ms-linear-gradient(top, r rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  /* W3C */
+
+  border: 1px solid #aaaaaa;
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  padding: 4px 12px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #444444;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  color: #222;
+  background: #eee;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  /* Opera11.10+ */
+
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  /* W3C */
+
+  border: 1px solid #888;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+}
+a.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+  background: #eee;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(255, 255, 255, 0.3)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+  /* Opera11.10+ */
+
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+  /* W3C */
+
+  border: 1px solid #888;
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+}
+.button.full-width,
+button.full-width,
+input[type="submit"].full-width,
+input[type="reset"].full-width,
+input[type="button"].full-width {
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center;
+}
+/* #Tabs (activate in app.js)
+================================================== */
+ul.tabs {
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 0;
+  border-bottom: solid 1px #aaaaaa;
+}
+ul.tabs li {
+  display: block;
+  width: auto;
+  height: 30px;
+  padding: 0;
+  float: left;
+  margin-bottom: 0;
+}
+ul.tabs li a {
+  display: block;
+  text-decoration: none;
+  width: auto;
+  height: 29px;
+  padding: 0px 20px;
+  line-height: 30px;
+  border: solid 1px #f2f2f2;
+  border-width: 1px 0 0 1px;
+  margin: 0;
+  background: #cccccc;
+  font-size: 13px;
+  color: #444444;
+}
+ul.tabs li a.active {
+  background: #aaaaaa;
+  height: 30px;
+  position: relative;
+  top: -4px;
+  padding-top: 4px;
+  border-right-width: 1px;
+  margin: 0 -1px 0 0;
+  color: #111;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  color: #111111;
+  text-shadow: 1px 1px 0 #dddddd;
+}
+ul.tabs li:first-child a {
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+ul.tabs li:last-child a {
+  border-width: 1px 1px 0 1px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+ul.tabs-content {
+  margin: 0;
+  display: block;
+}
+ul.tabs-content > li {
+  display: none;
+}
+ul.tabs-content > li.active {
+  display: block;
+}
+/* Clearfixing tabs for beautiful stacking */
+ul.tabs:before,
+ul.tabs:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+ul.tabs:after {
+  clear: both;
+}
+ul.tabs {
+  zoom: 1;
+}
+/* #Forms
+================================================== */
+form {
+  margin-bottom: 20px;
+}
+fieldset {
+  margin-bottom: 20px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  border: 1px solid #ccc;
+  padding: 6px 4px;
+  outline: none;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777;
+  margin: 0;
+  width: 300px;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  background: #fff;
+}
+select {
+  padding: 0;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 1px solid #aaa;
+  color: #444;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+textarea {
+  min-height: 60px;
+}
+label {
+  display: block;
+}
+legend {
+  display: block;
+  font-size: 2.8em;
+  color: #111111;
+}
+select {
+  width: 220px;
+}
+input[type="checkbox"] {
+  display: inline;
+}
+label span,
+legend span {
+  font-weight: normal;
+  font-size: 13px;
+  color: #444;
+}
+/*	--------------------------------------------------
+	Buttons
+	-------------------------------------------------- */
+.fbutton {
+  background: #444;
+  display: inline-block;
+  text-align: center;
+  padding: 9px 34px 11px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  text-shadow: none;
+}
+/* Don't use native buttons on iOS */
+input[type=submit].button {
+  -webkit-appearance: none;
+}
+.fbutton.nice {
+  background: #00a6fc url(../img/misc/button-gloss.png) repeat-x 0 -34px;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.28);
+  background: #00a6fc url(../img/misc/button-gloss.png) repeat-x 0 -34px, -moz-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
+  background: #00a6fc url(../img/misc/button-gloss.png) repeat-x 0 -34px, -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.4)), color-stop(100%, transparent));
+  border: 1px solid #0593dc;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+}
+.fbutton.radius {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.fbutton.round {
+  -moz-border-radius: 1000px;
+  -webkit-border-radius: 1000px;
+  border-radius: 1000px;
+}
+.fbutton.full-width {
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center;
+}
+.fbutton.left-align {
+  text-align: left;
+  text-indent: 12px;
+}
+/* Sizes ---------- */
+.small.fbutton {
+  font-size: 11px;
+  padding: 8px 20px 10px;
+  width: auto;
+}
+.medium.fbutton {
+  font-size: 13px;
+  width: auto;
+}
+.large.fbutton {
+  font-size: 18px;
+  padding: 11px 48px 13px;
+  width: auto;
+}
+/* Nice Sizes ---------- */
+.nice.small.fbutton {
+  background-position: 0 -36px;
+}
+.nice.large.fbutton {
+  background-position: 0 -30px;
+}
+/* Colors ---------- */
+.blue.fbutton {
+  background-color: #00a6fc;
+}
+.red.fbutton {
+  background-color: #e91c21;
+}
+.white.fbutton {
+  background-color: #e9e9e9;
+  color: #333;
+}
+.black.fbutton {
+  background-color: #141414;
+}
+/* Nice Colors ---------- */
+.nice.blue.fbutton {
+  border: 1px solid #0593dc;
+}
+.nice.red.fbutton {
+  border: 1px solid #b90b0b;
+}
+.nice.white.fbutton {
+  border: 1px solid #cacaca;
+  text-shadow: none !important;
+}
+.nice.black.fbutton {
+  border: 1px solid #000;
+}
+/* Hovers ---------- */
+.fbutton:hover,
+.fbutton:focus {
+  background-color: #0192dd;
+  color: #fff;
+}
+.blue.fbutton:hover,
+.blue.fbutton:focus {
+  background-color: #0192dd;
+}
+.red.fbutton:hover,
+.red.fbutton:focus {
+  background-color: #d01217;
+}
+.white.fbutton:hover,
+.white.fbutton:focus {
+  background-color: #dadada;
+  color: #333;
+}
+.black.fbutton:hover,
+.black.fbutton:focus {
+  background-color: #3a3a3a;
+}
+/* Disabled ---------- */
+.fbutton.disabled,
+.fbutton[disabled] {
+  opacity: 0.6;
+  cursor: default;
+}
+/* @import "base.less"; */
+/* ============================================================> PRIMARY STYLES */
+html {
+  border-top: 0.25em solid #111111;
+}
+body {
+  background: url(../img/mainbg.png) 0 0 repeat;
+}
+#main {
+  border-top: .1em solid #fff;
+  border-bottom: .1em solid #aaa;
+  background: #f6f6f6;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cecece), color-stop(1, #f6f6f6));
+  background: -ms-linear-gradient(bottom, #cecece, #f6f6f6);
+  background: -moz-linear-gradient(center bottom, #cecece 0%, #f6f6f6 100%);
+}
+#bottom {
+  border-top: .1em solid #ddd;
+  background: #bbb;
+}
+/* Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Antic', sans-serif;
+}
+p,
+li {
+  font-family: 'Quattrocento', serif;
+}
+/* Links */
+a {
+  padding: .25em;
+}
+a:hover {
+  background: #6d9a92;
+  text-shadow: none;
+}
+/* Main BG */
+#header {
+  padding-top: 2em;
+  border-bottom: 1em solid #111111;
+}
+#nav {
+  list-style: none;
+}
+#nav li {
+  float: left;
+  display: block;
+}
+#nav li a {
+  padding: .5em;
+  font-size: 1.25em;
+}
+#tag {
+  margin: 1em auto;
+  padding: 8em 0;
+  border-bottom: 1px solid #ccc;
+  background: #111111;
+}
+#tag h3 {
+  display: inline;
+  background: #6d9a92;
+  padding: .5em .5em .5em .25em;
+  color: #ccc;
+  text-shadow: 1px 1px 0 #315d54;
+}
+#tag h2 {
+  color: #ccc;
+}
+#tag p {
+  color: #aaa;
+}
+.add-songs-form {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+.add-songs-form h3 {
+  background: none;
+  border-bottom: 2px solid;
+}
+.add-songs-form p,
+.add-songs-form h3 {
+  color: #fff;
+  text-shadow: none;
+}
+#recent-playlists {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid #aaaaaa;
+}
+.playlists-list {
+  list-style: none;
+}
+.playlists-list li {
+  zoom: 1;
+  margin: 1em 0;
+  border-bottom: 1px dotted #aaa;
+}
+.playlists-list li:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+.playlists-list li:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+.playlists-list li img {
+  float: left;
+  margin-right: 1em;
+  padding: .5em;
+  border: 1px solid #aaa;
+}
+#all-playlists {
+  list-style: none;
+  font-size: 16px;
+}
+#all-playlists li,
+#all-playlists p,
+#all-playlists a {
+  font-size: 16px;
+}
+#all-playlists ul {
+  list-style: none;
+}
+#responses {
+  background: rgba(0, 0, 0, 0.3) url(../images/diag.png) 0 0 repeat;
+}
+#responses p {
+  font-size: 14px;
+}
+#responses p a {
+  color: #1ca4ff;
+}
+#responses p a:hover {
+  background: none;
+  text-decoration: underline;
+}
+#footer ul {
+  margin: 5em 0 0;
+  list-style: none;
+  zoom: 1;
+}
+#footer ul:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#footer ul:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#footer ul li {
+  float: left;
+  margin-right: 1em;
+}
+#footer ul li a {
+  color: #fff;
+  font-size: 1.6em;
+  text-shadow: 1px 1px 0 #999999;
+}
+#footer ul li a:hover {
+  background: transparent;
+  color: #444444;
+}
+footer {
+  margin-top: 20px;
+}
+footer ul {
+  list-style: none;
+  border-top: 1px solid;
+}
+footer ul li {
+  float: left;
+  display: block;
+  margin-right: 20px;
+}
+footer ul li a {
+  font-size: 16px;
+}
+.audiojs {
+  margin: 0 auto;
+}
+.playlist {
+  padding: 20px;
+}
+.playlist li {
+  padding: 10px;
+  margin-bottom: 2px;
+  /*&:hover {
+    		background: rgba(255,255,255,0.4);
+		}*/
+
+}
+.playlist li a {
+  background: rgba(247, 207, 3, 0.6);
+  padding: 10px;
+  color: #333;
+  font-size: 14px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.playlist li a:hover {
+  font-size: 16px;
+}
+.single a {
+  margin-left: 7px;
+}
+.black.fbutton,
+.black.fbutton {
+  text-shadow: none;
+}
+.black.fbutton:hover,
+.black.fbutton:focus {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* ==========================================================================================> SCREEN-ONLY PORTRAIT MOBILE (<480px) STYLES */
+@media only screen and (min-width: 260px) {
+  
+}
+/* ==========================================================================================> SCREEN-ONLY LANDSCAPE MOBILE (480px+) STYLES */
+@media only screen and (min-width: 480px) {
+  
+}
+/* ==========================================================================================> SCREEN-ONLY TABLETS/NETBOOKS (768px+) STYLES */
+@media only screen and (min-width: 768px) {
+  #nav {
+    float: right;
+    padding-top: 6%;
+  }
+  #nav li {
+    float: left;
+  }
+  #nav li a {
+    font-family: 'Antic', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    display: block;
+    padding: .25em 1em;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+}
+/* ==========================================================================================> SCREEN-ONLY DESKTOPS (1024px+) STYLES */
+@media only screen and (min-width: 1024px) {
+  
+}
+/* ==========================================================================================> PRINT-ONLY STYLES */
+/* Print styles inlined to avoid extra HTTP connection */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: sanbeiji.com/archives/953 */
+  
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /* Do not show javascript and internal links */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  /* Printing Tables: css-discuss.incutio.com/wiki/Printing_Tables */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

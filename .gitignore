@@ -1,0 +1,7 @@
+*.sketch
+fighter5.svg
+*.sql
+playlist.html
+config.codekit
+site/config.php
+site/assets/*

@@ -1,0 +1,191 @@
+#header h1, h1, h2, h3, h4, h5, h6, p { color: #ddd; text-shadow: 0 1px 0 #333; }
+    /* Fonts */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Quattrocento', Georgia;
+                padding: 5px;
+                
+    }
+
+    #header h1 { 
+        text-transform: uppercase; 
+        font-family: Arial;
+        font-family: Arial;
+        line-height: 1;
+        font-weight: bold;
+        font-size: 74px;
+        text-shadow: 0 2px 3px #333;
+    }
+    
+    p, li {
+        font-family: 'Quattrocento', serif;
+                
+    }
+
+
+#top-bar { display: none; }
+
+#header { padding: 10px; margin: 30px auto; xxxbackground: rgba(28,164,255, 0.5);}
+
+.playlists-challenge p { text-shadow: none; background: none; }
+#response { background: rgba(40,40,40,0.7); padding: 0; margin: 0; color: #000;}
+
+#response {
+    xbackground: none; padding: 0; margin: 0;
+}
+
+#response a { color: #89CDFA; }
+
+#commentary { background: rgba(0,0,0,0.6); margin: 20px auto; padding: 20px;}
+#commentary p { color: #fff;  }
+
+
+
+.playlist li.playing a {
+    font-weight: bold;
+    color: white;
+    background: rgba(147, 207, 3, 0.6);
+}
+
+
+.playlist li.playing a .song-name, .playlist li.playing a .artist-name, .playlist li.playing a .album-name {
+    color: black;
+}
+
+
+
+.audiojs audio {
+    left: -1px;
+    position: absolute;
+}
+
+.audiojs {
+    background: -moz-linear-gradient(center top , #444444 0%, #555555 50%, #444444 51%, #444444 100%) repeat scroll 0 0 #404040;
+    background: rgba(20,20,20,0.6);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    font-family: monospace;
+    font-size: 12px;
+    height: 70px;
+    overflow: hidden;
+    width: 460px;
+}
+.audiojs .play-pause {
+    border-right: 1px solid #555;
+    float: left;
+    height: 70px;
+    margin: 0;
+    overflow: hidden;
+    padding: 23px 6px;
+    width: 25px;
+}
+.audiojs p {
+    cursor: pointer;
+    display: none;
+    height: 30px;
+    margin: 0;
+    width: 25px;
+}
+.audiojs .play {
+    display: block;
+}
+.audiojs .scrubber {
+    background: none repeat scroll 0 0 #5A5A5A;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-top: 1px solid #3F3F3F;
+    float: left;
+    height: 14px;
+    margin: 28px 10px;
+    overflow: hidden;
+    position: relative;
+    width: 280px;
+}
+.audiojs .progress {
+    background: -moz-linear-gradient(center top , #CCCCCC 0%, #DDDDDD 50%, #CCCCCC 51%, #CCCCCC 100%) repeat scroll 0 0 #CCCCCC;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 1;
+}
+.audiojs .loaded {
+    background: -moz-linear-gradient(center top , #222222 0%, #333333 50%, #222222 51%, #222222 100%) repeat scroll 0 0 #000000;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+.audiojs .time {
+    border-left: 1px solid #555;
+    color: #DDDDDD;
+    float: left;
+    height: 76px;
+    line-height: 73px;
+    margin: 0 0 0 6px;
+    padding: 0 6px 0 12px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+.audiojs .time em {
+    color: #F9F9F9;
+    font-style: normal;
+    padding: 0 2px 0 0;
+}
+.audiojs .time strong {
+    font-weight: normal;
+    padding: 0 0 0 2px;
+}
+.audiojs .error-message {
+    color: #FFFFFF;
+    display: none;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 400px;
+}
+.audiojs .error-message a {
+    border-bottom: 1px solid #999999;
+    color: #EEEEEE;
+    padding-bottom: 1px;
+    text-decoration: none;
+}
+.audiojs .play {
+    background: url("/site/templates/js/player-graphics.gif") no-repeat scroll -2px -1px transparent;
+}
+.audiojs .loading {
+    background: url("/site/templates/js/player-graphics.gif") no-repeat scroll -2px -31px transparent;
+}
+.audiojs .error {
+    background: url("/site/templates/js/player-graphics.gif") no-repeat scroll -2px -61px transparent;
+}
+.audiojs .pause {
+    background: url("/site/templates/js/player-graphics.gif") no-repeat scroll -2px -91px transparent;
+}
+.playing .play, .playing .loading, .playing .error {
+    display: none;
+}
+.playing .pause {
+    display: block;
+}
+.loading .play, .loading .pause, .loading .error {
+    display: none;
+}
+.loading .loading {
+    display: block;
+}
+.error .time, .error .play, .error .pause, .error .scrubber, .error .loading {
+    display: none;
+}
+.error .error {
+    display: block;
+}
+.error .play-pause p {
+    cursor: auto;
+}
+.error .error-message {
+    display: block;
+}

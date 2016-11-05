@@ -1,0 +1,167 @@
+//
+// ANIMATIONS
+// ===========
+// Animation based on Animate.css by Daniel Eden.
+// http://daneden.github.io/animate.css/
+//
+// More can be created using the above code base. These are 
+// the bare minimum for interaction without fluff.
+//
+
+
+
+
+// .fade-in
+
+@keyframes fadeIn
+  0%
+    opacity(0)
+  100%
+    opacity(1)
+.fade-in
+  animation-name fadeIn
+
+
+
+// .fade-in-down
+
+@keyframes fadeInDown
+  0%
+    opacity(0)
+    transform translate3d(0, -30px, 0)
+  100%
+    opacity(1)
+    -webkit-transform none
+    transform none
+.fade-in-down
+  animation-name fadeInDown
+
+
+
+// .fade-in-down-big
+
+@keyframes fadeInDownBig
+  0%
+    opacity(0)
+    transform translate3d(0, -100%, 0)
+  100%
+    opacity(1)
+    transform none
+.fade-in-down-big
+  animation-name fadeInDownBig
+
+
+
+// .fade-in-left
+
+@keyframes fadeInLeft
+  0%
+    opacity(0)
+    transform translate3d(-30px, 0, 0)
+  100%
+    opacity(1)
+    transform none
+.fade-in-left
+  animation-name fadeInLeft
+
+
+
+// .fade-in-left-big
+
+@keyframes fadeInLeftBig
+  0%
+    opacity(0)
+    transform translate3d(-100%, 0, 0)
+  100%
+    opacity(1)
+    transform none
+.fade-in-left-big
+  animation-name fadeInLeftBig
+
+
+
+// .fade-in-right
+
+@keyframes fadeInRight
+  0%
+    opacity(0)
+    transform translate3d(30px, 0, 0)
+  100%
+    opacity(1)
+    transform none
+.fade-in-right
+  animation-name fadeInRight
+
+
+
+// .fade-in-right-big
+
+@keyframes fadeInRightBig
+  0%
+    opacity(0)
+    transform translate3d(100%, 0, 0)
+  100%
+    opacity(1)
+    transform none
+.fade-in-right-big
+  animation-name fadeInRightBig
+
+
+
+// .fade-in-up
+
+@keyframes fadeInUp
+  0%
+    opacity(0)
+    transform translate3d(0, 30px, 0)
+  100%
+    opacity(1)
+    transform none
+.fade-in-up
+  animation-name fadeInUp
+
+
+
+// .fade-in-up-big
+
+@keyframes fadeInUpBig
+  0%
+    opacity(0)
+    transform translate3d(0, 100%, 0)
+  100%
+    opacity(1)
+    transform none
+.fade-in-up-big
+  animation-name fadeInUpBig
+
+
+
+// .fade-out-up
+
+@keyframes fadeOutUp
+  0%
+    opacity(1)
+  100%
+    opacity(0)
+    transform translate3d(0, -30px, 0)
+.fade-out-up
+  animation-name fadeOutUp
+
+
+
+// .rotate-colors
+@keyframes rotateColors
+  0%
+    background-color color-base
+  20%
+    background-color mix(color-base, mediumvioletred)
+  40%
+    background-color mix(color-base, lightseagreen)
+  60%
+    background-color mix(color-base, mintcream)
+  80%
+    background-color spin(color-base, 180)
+  100%
+    background-color spin(color-base, -(360 / 3))
+.rotate-colors
+  animation 2s rotateColors infinite

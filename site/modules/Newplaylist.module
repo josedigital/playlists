@@ -1,0 +1,47 @@
+<?php
+class Newplaylist extends WireData implements Module {
+        public static function getModuleInfo() {
+                return array(
+                        'title' => 'New playlist notifier', 
+                        'version' => 100, 
+                        'summary' => 'notifies users when a new playlist is saved',
+                        'singular' => true, 
+                        'autoload' => true
+                        );
+        }
+        public function init() {
+                $this->pages->addHookAfter('save', $this, 'exampleMethod'); 
+        }
+        public function exampleMethod($event) {
+                $page = $event->arguments[0];
+		$user = $event->return; 
+
+                $subject = 'new playlist modified: ' . $page->title . ' by: ' . $user;
+                if(!$user) return;
+		if($this->notifyEmail) $this->notifyEmail($user);
+		
+                
+                #mail('drinkhorchata@gmail.com', $subject, 'message');
+/*                foreach ($users as $user) {
+                      mail($user->email, 'subject', 'message');
+                }
+                $page = $event->arguments[0]; 
+		$message = "a new play list has been added by " . $page->createdUser->name . ". Check out the new playlist, <a href=\"" . $page->url . "\">" . $page->title . "</a>.";
+                $subject = 'a new playlist has just been added';
+                foreach ($users as $user) {
+		      mail($user->email, $subject, $message);
+		}
+*/        }
+
+
+        /**
+         * Send notification email
+         *
+         */
+        protected function notifyEmail(User $user) {
+                $subject = $this->parseTags($this->notifySubject, $user); 
+                $body = $this->parseTags($this->notifyBody, $user);
+                @mail($this->notifyEmail, $subject, $body, "From:{$this->notifyEmail}"); 
+        }
+
+}

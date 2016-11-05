@@ -1,0 +1,711 @@
+@import "mixins.less";
+@import "reveal.css";
+/*
+	* Main stylesheet: contains CSS normalization, base styles, typography with a vertical rhythm and some mobile-first media queries
+
+	* Credit is left inline
+	* Much content and inspiration was taken from the normalize.css project:
+	* http://necolas.github.com/normalize.css/ and https://github.com/jonathantneal/normalize.css
+
+	* The media queries included in here are only placeholder. You should modify them as your content requires
+
+	* Across this document we use safe CSS hacks to target IE6 and IE7
+	* Selectors beggining with an underscore (_selector: property) target only IE6.
+	* Selectors beggining with an asterisk (*selector: property) target only IE6 and IE7.
+*/
+
+/* ==========================================================================================> DEFAULT STYLES */
+
+/* Styles for all viewport widths and print */
+
+/* ============================================================> HTML5 ELEMENTS DISPLAY */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
+	display: block;
+}
+
+audio[controls], canvas, video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+/* ============================================================> BASE STRUCTURE */
+
+/*
+	* The body will work like a 'div#wrapper' (for this to work, the 'body' needs to have a set width)
+
+	* To add a background to the PAGE, set it in the 'html' element
+	* To add a background to the WRAPPER, set it in the 'body' element
+*/
+html {
+	height: 100%;
+	font-size: 100%;
+	overflow-y: scroll; /* Force a scrollbar in non-IE */
+	-webkit-text-size-adjust: 100%; /* Remove iOS text size adjust without disabling user zoom */
+}
+
+
+body {
+	font-size: 62.5%; 
+	font-weight: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, serif; 
+	color: @fontcolor;
+	background: @mainbg;
+	-webkit-text-size-adjust: none;
+	line-height: 1.5;
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+
+
+/* Add more tags as your project needs */
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img {
+	margin: 0 0 1.625em;
+}
+hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+hr.line { border: solid #bbb; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 1px; }
+hr.clear { height: 0; margin: 0; padding: 0; visibility: hidden; clear: both; }
+
+::selection {background: #deff44;}
+::-moz-selection {background:#d2381f;color: #fff;}
+::-webkit-selection {background:#d2381f;color:#fff;}
+
+
+/* ============================================================> HEADINGS AND SMALL */
+
+/*
+	* Font sizes are based on the golden ratio of 16
+	* See this for the modular scale: ow.ly/5jGl6
+	* Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across elements 
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: @dark; /* More contrast than body text for headings */
+	margin: 0 0 .25em 0;
+}
+
+h1 {
+	font-size: @h1;
+	font-size: @h1r;
+}
+
+h2 {
+	font-size: @h2;
+	font-size: @h2r;
+}
+
+h3 {
+	font-size: @h3;
+	font-size: @h3r;
+}
+
+h4 {
+	font-size: @h4;
+	font-size: @h4r;
+}
+
+h5 {
+	font-size: @h5;
+	font-size: @h5r;
+}
+
+h6 {
+	font-size: @h6;
+	font-size: @h6r;
+}
+
+
+small {
+	font-size: 1em; /* 10px */
+	margin: 0 0 2.6em;
+}
+
+
+
+/* ============================================================> GENERAL TYPOGRAPHY */
+
+p, li {font-size: @p; font-size: @pr; line-height: inherit;}
+
+
+
+
+
+/* ============================================================> PREFORMATTED TEXT AND CODE */
+
+/* Allows line wrapping of 'pre' */
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+pre, code, kbd, samp {
+	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, 'Courier New', Courier, monospace;
+}
+
+/* ============================================================> TABLES */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th {
+	text-align: left;
+}
+
+tr, th, td {
+	padding-right: 1.625em;
+	border-bottom: 0 solid #333;
+}
+
+/* ============================================================> FORMS */
+
+form {
+	margin: 0;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+legend {
+	*margin-left: -7px;
+}
+
+button, input, select, textarea {
+	vertical-align: baseline;
+	*vertical-align: middle;
+}
+
+button, input {
+	line-height: normal;
+	*overflow: visible;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/* ============================================================> QUOTES */
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+blockquote, q, cite {
+	font-style: italic;
+}
+
+blockquote {
+	padding-left: 1.625em;
+	border-left: 3px solid #ccc;
+}
+
+blockquote > p {
+	padding: 0;
+}
+
+/* ============================================================> LISTS */
+
+ul, ol {
+	list-style-position: inside;
+	padding: 0;
+}
+
+li ul, li ol {
+	margin: 0 1.625em;
+}
+
+dl dd {
+	margin-left: 1.625em;
+}
+
+/* ============================================================> LINKS */
+
+a {
+	text-decoration: none; outline: none;
+	color: @linkcolor;
+}
+
+a:hover {
+	color: @linkhover;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+/* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+	outline: none;
+}
+
+/* ============================================================> VISUAL MEDIA */
+
+figure {
+	margin: 0;
+}
+
+img, object, embed, video {
+	max-width: 100%; /* Consider this first: unstoppablerobotninja.com/entry/fluid-images/ */
+	_width: 100%; /* IE6 doesn't support max-width, so we just use width: 100%. If the image/video is smaller than the container, change 100% to an absolute value */
+}
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images: css-tricks.com/ie-fix-bicubic-scaling-for-images */
+}
+
+/* Corrects overflow displayed oddly in IE9 */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* ============================================================> ABBREVIATIONS */
+
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}
+
+/* ============================================================> MARKED/INSERTED/DELETED TEXT */
+
+ins, mark {
+	text-decoration: none;
+}
+
+mark {
+	background: #ff0;
+}
+
+ins {
+	background: #ff9;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+/* ============================================================> OTHERS */
+
+strong, b, dt {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+var, address {
+	font-style: normal;
+}
+
+/* Position 'sub' and 'sup' without affecting line-height: gist.github.com/413930 */
+sub, sup {
+	font-size: 0.625em;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+/* ============================================================> HELPER CLASSES */
+
+/*
+	* Micro clearfix hack
+	* More semantically titled with the class name 'group'
+
+	* Source: nicolasgallagher.com/micro-clearfix-hack/
+*/
+.group:before, .group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	*zoom: 1;
+}
+
+
+
+/* #Buttons
+================================================== */
+	
+
+	/* Button variables */
+	
+	/* button background ------------------- */
+	@buttonbackgroundcolor: #eee;
+	@buttongradlight: rgba(255,255,255,.2);
+	@buttongraddark: rgba(0,0,0,.2);
+	  
+		.buttonbackground {
+			/* .gradient(@buttonbackgroundcolor, @buttongraddark, @buttongradlight); */
+			background: @buttonbackgroundcolor; /* Old browsers */
+			background: -moz-linear-gradient(top, @buttongradlight 0%, @buttongraddark 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@buttongradlight), color-stop(100%,@buttongraddark)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, @buttongradlight 0%,@buttongraddark 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, @buttongradlight 0%,@buttongraddark 100%); /* Opera11.10+ */
+			background: -ms-linear-gradient(top, r@buttongradlight 0%,@buttongraddark 100%); /* IE10+ */
+			background: linear-gradient(top, @buttongradlight 0%,@buttongraddark 100%); /* W3C */
+		}
+
+
+	/* button border ------------------- */
+	@buttonborder: #aaa;
+	@buttonborderTopLeft: #ccc;
+
+		.buttonborder {
+			border: 1px solid @buttonborder;
+			border-top: 1px solid @buttonborderTopLeft;
+			border-left: 1px solid @buttonborderTopLeft;
+		}
+	@buttonborderradius: 3px;
+	
+	/* button font ------------------- */
+	@buttonfontcolor: #444;
+	@buttonfontsize: .8em;
+	@buttonfontweight: bold;
+	@buttontextshadow: 0 1px rgba(255, 255, 255, .75);
+	
+	@marginbottom: 20px;
+
+	a.button, 
+	button,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+		.buttonbackground();
+		.buttonborder();
+		padding: 4px 12px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		.border-radius(@buttonborderradius,@buttonborderradius,@buttonborderradius,@buttonborderradius);
+		color: @buttonfontcolor;
+		display: inline-block;
+		font-size: @buttonfontsize;
+		font-weight: @buttonfontweight;
+		text-decoration: none;
+		text-shadow: @buttontextshadow;
+		cursor: pointer;
+		margin-bottom: @marginbottom;
+		line-height: 21px;
+		font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+	  
+	  
+	a.button:hover, 
+	button:hover,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover {
+		color: #222;
+		background: #eee; /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+		background: linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+	  
+  a.button:active, 
+  button:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	input[type="button"]:active {
+    background: #eee; /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0,0,0,.3) 0%, rgba(255,255,255,.3) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,.3)), color-stop(100%,rgba(255,255,255,.3))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,.3) 0%,rgba(255,255,255,.3) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,0,0,.3) 0%,rgba(255,255,255,.3) 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,0,0,.3) 0%,rgba(255,255,255,.3) 100%); /* IE10+ */
+    background: linear-gradient(top, rgba(0,0,0,.3) 0%,rgba(255,255,255,.3) 100%); /* W3C */
+    border: 1px solid #888;
+    border-bottom: 1px solid #aaa;
+    border-right: 1px solid #aaa; }
+	
+	.button.full-width, 
+	button.full-width,
+	input[type="submit"].full-width,
+	input[type="reset"].full-width,
+	input[type="button"].full-width { 
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center; }
+	
+	
+/* #Tabs (activate in app.js)
+================================================== */
+	ul.tabs { 
+		display: block;
+		margin: 0 0 20px 0;
+		padding: 0;
+		border-bottom: solid 1px @tabsborderbottom; }
+	ul.tabs li { 
+		display: block;
+		width: auto;
+		height: 30px;
+		padding: 0;
+		float: left;
+		margin-bottom: 0; }
+	ul.tabs li a {
+		display: block; 
+		text-decoration: none;
+		width: auto; 
+		height: 29px; 
+		padding: 0px 20px; 
+		line-height: 30px; 
+		border: solid 1px @tabsborder;
+		border-width: 1px 0 0 1px; 
+		margin: 0;  
+		background: @tabbg;
+		font-size: 13px; 
+		color: @tabcolor;
+	}
+	ul.tabs li a.active { 
+		background: @tabactive;
+		height: 30px;
+		position: relative;
+		top: -4px;
+		padding-top: 4px;
+		border-right-width: 1px;
+		margin: 0 -1px 0 0;
+		color: #111;
+		-moz-border-radius-topleft: 2px;
+		-webkit-border-top-left-radius: 2px;
+		border-top-left-radius: 2px;
+		-moz-border-radius-topright: 2px;
+		-webkit-border-top-right-radius: 2px;
+		border-top-right-radius: 2px; 
+		color: @tabactivecolor;
+		.textshadow-color(#ddd);
+}
+	ul.tabs li:first-child a {
+		-moz-border-radius-topleft: 2px;
+		-webkit-border-top-left-radius: 2px;
+		border-top-left-radius: 2px; }
+	ul.tabs li:last-child a {
+		border-width: 1px 1px 0 1px;
+		-moz-border-radius-topright: 2px;
+		-webkit-border-top-right-radius: 2px;
+		border-top-right-radius: 2px; }
+	
+	ul.tabs-content { margin: 0; display: block; }
+	ul.tabs-content > li { display:none; }
+	ul.tabs-content > li.active { display: block; }
+		
+	/* Clearfixing tabs for beautiful stacking */
+	ul.tabs:before,
+	ul.tabs:after {
+	  content: '\0020';
+	  display: block;
+	  overflow: hidden;
+	  visibility: hidden;
+	  width: 0;
+	  height: 0; }
+	ul.tabs:after {
+	  clear: both; }
+	ul.tabs {
+	  zoom: 1; }
+			
+			
+/* #Forms
+================================================== */
+
+	form { 
+		margin-bottom: 20px; }
+	fieldset { 
+		margin-bottom: 20px; }
+	input[type="text"], 
+	input[type="password"],
+	input[type="email"],
+	textarea, 
+	select {
+		border: 1px solid #ccc;
+		padding: 6px 4px;
+		outline: none;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #777;
+		margin: 0;
+		width: @fwidth;
+		max-width: 100%;
+		display: block;
+		margin-bottom: 20px;
+		background: #fff; }
+	select { 
+		padding: 0; }
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="email"]:focus, 
+	textarea:focus {
+		border: 1px solid #aaa;
+ 		color: #444;
+ 		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		box-shadow:  0 0 3px rgba(0,0,0,.2); }
+	textarea {
+		min-height: 60px; }
+	label { 
+		display: block;
+		}
+	legend { 
+		display: block;
+		font-size: @legend; 
+		color: @dark; }
+	select { 
+		width: 220px; }
+	input[type="checkbox"] {
+		display: inline; }
+	label span,
+	legend span {
+		font-weight: normal;
+		font-size: 13px;
+		color: #444; }
+
+
+
+
+/*	--------------------------------------------------
+	Buttons
+	-------------------------------------------------- */
+
+	.fbutton {
+		background: #444;
+		display: inline-block;
+		text-align: center;
+		padding: 9px 34px 11px;
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		line-height: 1;
+		font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+		position: relative;
+		cursor: pointer;
+		border: none;
+		text-shadow: none;
+	}
+	
+  /* Don't use native buttons on iOS */
+	input[type=submit].button { -webkit-appearance: none; }
+	
+	.fbutton.nice { 
+		background: #00a6fc url(../img/misc/button-gloss.png) repeat-x 0 -34px;
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
+		background: #00a6fc url(../img/misc/button-gloss.png) repeat-x 0 -34px, -moz-linear-gradient(top, rgba(255,255,255,.4) 0%, transparent 100%);
+		background: #00a6fc url(../img/misc/button-gloss.png) repeat-x 0 -34px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.4)), color-stop(100%,transparent));
+		border: 1px solid #0593dc;
+		-webkit-transition: background-color .15s ease-in-out;
+		-moz-transition: background-color .15s ease-in-out;
+		-o-transition: background-color .15s ease-in-out; 
+	}
+
+	.fbutton.radius { 
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	}
+	.fbutton.round { 
+		-moz-border-radius: 1000px;
+		-webkit-border-radius: 1000px;
+		border-radius: 1000px;
+	}
+	
+	.fbutton.full-width { 
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center; 
+	}
+	
+	.fbutton.left-align { 
+		text-align: left; 
+		text-indent: 12px;
+	}
+	
+	/* Sizes ---------- */
+	.small.fbutton 			{ font-size: 11px; padding: 8px 20px 10px; width: auto; }
+	.medium.fbutton 			{ font-size: 13px; width: auto; }
+	.large.fbutton 			{ font-size: 18px; padding: 11px 48px 13px; width: auto; }
+	
+	/* Nice Sizes ---------- */
+	.nice.small.fbutton 		{ background-position: 0 -36px; }
+	.nice.large.fbutton 		{ background-position: 0 -30px; }
+	 
+	/* Colors ---------- */
+	.blue.fbutton			{ background-color: #00a6fc;  }
+	.red.fbutton				{ background-color: #e91c21; }
+	.white.fbutton			{ background-color: #e9e9e9; color: #333; }
+	.black.fbutton			{ background-color: #141414; }
+	
+	/* Nice Colors ---------- */
+	.nice.blue.fbutton		{ border: 1px solid #0593dc;  }
+	.nice.red.fbutton		{ border: 1px solid #b90b0b;  }
+	.nice.white.fbutton		{ border: 1px solid #cacaca; text-shadow: none !important; }
+	.nice.black.fbutton		{ border: 1px solid #000; }
+	
+	/* Hovers ---------- */
+	.fbutton:hover, .fbutton:focus 				{ background-color: #0192dd; color: #fff; }
+	.blue.fbutton:hover, .blue.fbutton:focus		{ background-color: #0192dd; 	}
+	.red.fbutton:hover, .red.fbutton:focus 		{ background-color: #d01217; 	}
+	.white.fbutton:hover, .white.fbutton:focus	{ background-color: #dadada; color: #333; }
+	.black.fbutton:hover, .black.fbutton:focus	{ background-color: #3a3a3a; }
+	
+	
+	/* Disabled ---------- */
+	.fbutton.disabled, .fbutton[disabled] { opacity: 0.6; cursor: default; }
+	

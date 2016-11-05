@@ -1,0 +1,1 @@
+$(function(){var n=$(".nav-trigger"),a=$("body"),c=$(".scrolly"),i,o;i=function(){a.addClass("nav-active")},o=function(){a.removeClass("nav-active")},n.on("click",function(){return a.hasClass("nav-active")?o():i(),!1}),c.scrolly()});

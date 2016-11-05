@@ -1,0 +1,383 @@
+@import "mixins.less";
+@import "base.less";
+/* @import "base.less"; */
+/* ============================================================> PRIMARY STYLES */
+
+	html {
+		border-top: .25em solid @dark;
+	}
+	body {background: url(../img/mainbg.png) 0 0 repeat;}
+
+
+	#main {
+		border-top: .1em solid #fff;
+		border-bottom: .1em solid #aaa;
+		.gradient(#f6f6f6, #cecece, #f6f6f6);
+	}
+	
+	#bottom {
+		border-top: .1em solid #ddd;
+		background: #bbb;	
+	}
+
+
+	/* Fonts */
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Antic', sans-serif;
+	}
+	
+	p, li {
+		font-family: 'Quattrocento', serif;
+	}
+	
+
+	/* Links */
+	a {padding: .25em;}
+	a:hover {
+		background: @linkcolor;
+		text-shadow: none;
+	}
+
+
+
+
+	
+	/* Main BG */
+	body {
+		}
+
+
+	#header {
+		padding-top: 2em;
+		border-bottom: 1em solid @dark;
+	}
+	
+		
+	#nav {
+		list-style: none;
+	
+		li {
+			float: left;
+			display: block;
+			
+			a {
+				padding: .5em;
+				font-size: 1.25em;
+			}
+		}
+	}
+	
+	
+	
+	
+	#tag {
+		margin: 1em auto;
+		padding: 8em 0;
+		border-bottom:  1px solid #ccc;
+		background: @dark;
+		
+		
+		h3 {
+			display: inline;
+			background: @linkcolor;
+			padding: .5em .5em .5em .25em;
+			color: #ccc;
+			.textshadow-color(#315d54);
+		}
+
+		h2 {
+			color: #ccc;
+		}
+
+		p { color: #aaa; }
+	}
+
+
+	
+	.add-playlist-form {}
+	.add-songs-form {
+		padding: 10px;
+		background: rgba(0,0,0,0.6);
+
+		h3 {
+			background: none;
+			border-bottom: 2px solid;
+		}
+		p, h3 {
+			color: #fff;
+			text-shadow: none;
+		}
+	}
+	
+	
+	#recent-playlists {
+		margin-top: 1em; padding-top: 1em;
+		border-top: 1px solid @lighter;
+	}
+	
+	
+	.playlists-list {
+		list-style: none;
+		
+		li {
+			.clearfix();
+			margin: 1em 0;
+			border-bottom: 1px dotted #aaa;
+		
+			img {
+				float: left;
+				margin-right: 1em;
+				padding: .5em;
+				border: 1px solid #aaa;
+
+			}	
+		}
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#all-playlists {
+		list-style: none;
+		font-size: 16px;
+
+		li,p,a {
+			font-size: 16px;
+		}
+
+		ul {
+			list-style: none;
+		}
+	}
+	
+	
+	#responses {
+		background: rgba(0,0,0,0.3) url(../images/diag.png) 0 0 repeat;
+
+		p {
+			font-size: 14px;
+
+			a {
+				color: rgba(28,164,255, 1);
+
+				&hover {
+					background: none;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	#footer {
+		ul {
+			margin: 5em 0 0;
+			list-style: none;
+			.clearfix();
+							
+			li {
+				float: left;
+				margin-right: 1em;
+				a {
+					color: #fff;
+					font-size: 1.6em;
+					.textshadow-color(#999)
+				}
+				
+				a:hover {
+					background: transparent;
+					color: @med;
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+
+
+
+.audiojs { margin: 0 auto;  }
+
+.playlist {
+    padding: 20px;
+
+    li {
+		padding: 10px;
+		//background: rgba(255,255,255,0.2);
+		margin-bottom: 2px;
+
+		/*&:hover {
+    		background: rgba(255,255,255,0.4);
+		}*/
+
+		a {
+			background: rgba(247,207,3,0.6);
+			padding: 10px; 
+			color: #333;
+			//color: #fff;
+			//text-shadow: 1px 1px 1px #000;
+			font-size: 14px;
+			.transition;
+
+
+			&:hover {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.single a { margin-left: 7px;}
+
+	
+	
+	.black.fbutton, .black.fbutton {
+		text-shadow: none;		
+	}
+	.black.fbutton:hover, .black.fbutton:focus	{ .transition(); }
+	
+
+
+/* ==========================================================================================> SCREEN-ONLY PORTRAIT MOBILE (<480px) STYLES */
+
+@media only screen and (min-width: 260px) {
+	
+
+
+
+}
+
+
+/* ==========================================================================================> SCREEN-ONLY LANDSCAPE MOBILE (480px+) STYLES */
+
+@media only screen and (min-width: 480px) {
+}
+
+/* ==========================================================================================> SCREEN-ONLY TABLETS/NETBOOKS (768px+) STYLES */
+
+@media only screen and (min-width: 768px) { 
+
+
+
+
+	#nav {
+		float: right;
+		padding-top: 6%;
+		
+		li {
+			float: left;
+			
+			a {
+				font-family: 'Antic', sans-serif;
+				text-transform: uppercase;
+				font-size: 1.5em;
+				display: block;
+				padding: .25em 1em;
+				.transition();
+			}
+			
+		}
+	}
+
+
+
+
+
+
+}
+
+/* ==========================================================================================> SCREEN-ONLY DESKTOPS (1024px+) STYLES */
+
+@media only screen and (min-width: 1024px) { 
+
+	
+
+}
+
+
+
+/* ==========================================================================================> PRINT-ONLY STYLES */
+
+/* Print styles inlined to avoid extra HTTP connection */
+
+@media print {
+	* {
+		background: transparent !important;
+		color: black !important; /* Black prints faster: sanbeiji.com/archives/953 */
+		text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important;
+	}
+
+	a, a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	/* Do not show javascript and internal links */
+	a[href^="javascript:"]:after, a[href^="#"]:after {
+		content: ""; 
+	}
+
+	/* Printing Tables: css-discuss.incutio.com/wiki/Printing_Tables */
+	thead {
+		display: table-header-group;
+	}
+
+	tr, img {
+		page-break-inside: avoid;
+	}
+
+	@page {
+		margin: 0.5cm;
+	}
+
+	p, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2, h3 {
+		page-break-after: avoid;
+	}
+}

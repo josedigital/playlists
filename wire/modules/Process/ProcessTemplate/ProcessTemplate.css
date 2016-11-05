@@ -1,0 +1,17 @@
+#changed_fields ul li {
+	padding: 0.25em; 
+}
+
+.InputfieldCheckboxes table.AdminDataTable td:first-child {
+	width: 40%; 
+	
+}
+
+#roles_editor table th,
+#roles_editor table td {
+	width: 20%; 
+}
+
+input[disabled=disabled] {
+	opacity: 0.5; 	
+}

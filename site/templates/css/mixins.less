@@ -1,0 +1,178 @@
+/*	--------------------------------------------------
+	:: Variables
+	-------------------------------------------------- */
+	@mainbg: 		#f2f2f2;
+	@fontcolor:		#444;
+	@linkcolor:		#6d9a92;
+	@linkhover:		#fff;
+	
+	/* text shadow - define everything */
+	.textshadow(
+		@xshad: 1px, 
+		@yshad: 1px, 
+		@spread: 0, 
+		@shadcolor: #fff) {
+			@val: @xshad @yshad @spread @shadcolor;
+			text-shadow: @val;
+		}
+	
+	/* text shadow - 1px, 1px, 0, define only color */
+	.textshadow-color(
+		@shadcolor: #fff) {
+			@val: 1px 1px 0 @shadcolor;
+			text-shadow: @val;
+		}
+	
+
+
+	/* Main Colors */
+	/*grays*/
+	@dark:			#111;
+	@med:			#444;
+	@light:			#888;
+	@lighter:		#aaa;
+	@lightest:		#ccc;
+	
+	
+	@blue:			#2a85e8;
+	@green:			#116655;
+
+
+	/* Font Sizes */
+	@h1:			46px;
+	@h2:			35px;
+	@h3:			28px;
+	@h4:			21px;
+	@h5:			18px;
+	@h6:			15px;
+	@p:				13px;
+	@pmobile:		14px;
+	
+	@h1r:			4.6em;
+	@h2r:			3.5em;
+	@h3r:			2.8em;
+	@h4r:			2.1em;
+	@h5r:			1.8em;
+	@h6r:			1.5em;
+	@pr:			1.3em;
+	@prmobile:		1.4em;
+
+
+
+	/* Tabs */
+	@tabbg:			#ccc;
+	@tabcolor:		@med;
+	@tabactive:		#aaa;
+	@tabactivecolor:@dark;
+	@tabsborder:	@mainbg;
+	@tabsborderbottom: @lighter;
+
+
+
+	/* Forms */
+	@legend: 		@h3r;
+	@fwidth:		300px; /* form elemnts width */
+	
+	
+	/* Opacity */
+	.opacity(@opacity: 0.5) {
+		-moz-opacity: @opacity;
+		-khtml-opacity: @opacity;
+		-webkit-opacity: @opacity;
+		opacity: @opacity;
+	}
+	
+	
+	/* Rounded Corners + Border Radius */
+	.rounded(@radius: 2px) {
+		-webkit-border-radius: @radius;
+		-moz-border-radius: @radius;
+		border-radius: @radius;
+		-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+	}
+	
+	.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+		-webkit-border-top-right-radius: @topright;
+		-webkit-border-bottom-right-radius: @bottomright;
+		-webkit-border-bottom-left-radius: @bottomleft;
+		-webkit-border-top-left-radius: @topleft;
+		-moz-border-radius-topright: @topright;
+		-moz-border-radius-bottomright: @bottomright;
+		-moz-border-radius-bottomleft: @bottomleft;
+		-moz-border-radius-topleft: @topleft;
+		border-top-right-radius: @topright;
+		border-bottom-right-radius: @bottomright;
+		border-bottom-left-radius: @bottomleft;
+		border-top-left-radius: @topleft;
+		-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+	}
+	
+	
+	
+	
+	/* Gradients */
+	.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+		background: @color;
+		background: -webkit-gradient(linear,
+		                       left bottom,
+		                       left top,
+		                       color-stop(0, @start),
+		                       color-stop(1, @stop));
+		background: -ms-linear-gradient(bottom,
+		                          @start,
+		                          @stop);
+		background: -moz-linear-gradient(center bottom,
+		                           @start 0%,
+		                           @stop 100%);
+	}
+	
+	
+	
+	
+	/* Animations */
+	.transition(@duration:0.2s, @ease:ease-out) {
+		-webkit-transition: all @duration @ease;
+		-moz-transition: all @duration @ease;
+		transition: all @duration @ease;
+	}
+
+	.scale(@ratio:1.5){
+		-webkit-transform:scale(@ratio);
+		-moz-transform:scale(@ratio);
+		transform:scale(@ratio);
+	}
+
+
+	.rotation(@deg:5deg){
+		-webkit-transform: rotate(@deg);
+		-moz-transform: rotate(@deg);
+		transform: rotate(@deg);
+	}
+
+
+
+	/* Drop shadows */
+	.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+	  -webkit-box-shadow: @shadow;
+	  -moz-box-shadow: @shadow;
+	  box-shadow: @shadow;
+	}
+
+
+
+
+
+	/* Clearfix for clearing floats like a boss */
+	.clearfix {
+	  zoom: 1;
+		&:after {
+	    display: block;
+	    visibility: hidden;
+	    height: 0;
+	    clear: both;
+	    content: ".";
+		}
+	}
+	
+
+

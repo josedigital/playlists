@@ -1,0 +1,482 @@
+body
+  background rgba(2,135,188,1)
+  background -moz-linear-gradient(-45deg, rgba(2,135,188,1) 0%, rgba(4,186,104,1) 100%)
+  background -webkit-gradient(left top, right bottom, color-stop(0%, rgba(2,135,188,1)), color-stop(100%, rgba(4,186,104,1)))
+  background -webkit-linear-gradient(-45deg, rgba(2,135,188,1) 0%, rgba(4,186,104,1) 100%)
+  background -o-linear-gradient(-45deg, rgba(2,135,188,1) 0%, rgba(4,186,104,1) 100%)
+  background -ms-linear-gradient(-45deg, rgba(2,135,188,1) 0%, rgba(4,186,104,1) 100%)
+  background linear-gradient(135deg, rgba(2,135,188,1) 0%, rgba(4,186,104,1) 100%)
+
+  background-attachment fixed
+  background-position center center
+  background-attachment fixed
+  background-size cover
+
+
+
+
+.preloader
+  position relative
+  margin 40vh auto 0
+  width 100px
+
+  span
+    display block
+    bottom 0px
+    width 9px
+    height 5px
+    background color-gray
+    position absolute
+    animation preloader 1.5s infinite ease-in-out
+ 
+    &:nth-child(2)
+      left 11px
+      animation-delay .2s
+    &:nth-child(3)
+      left 22px
+      animation-delay: .4s
+    &:nth-child(4)
+      left 33px
+      animation-delay .6s
+    &:nth-child(5)
+      left 44px
+      animation-delay .8s
+
+@keyframes preloader 
+  0% 
+    height 5px
+    transform translateY(0px);
+    background color-gray;
+  25% 
+    height 30px
+    transform translateY(15px)
+    background base-color
+  50% 
+    height 5px
+    transform translateY(0px)
+    background color-gray
+  100% 
+    height 5px
+    transform translateY(0px)
+    background color-gray
+
+
+
+.page-wrapper
+  opacity 0
+  transition()
+
+  
+
+
+nav
+  border-bottom 4px solid
+  .nav-header
+    padding-top 2em
+    height 50px
+    h1
+      font-size(24)
+      margin 0
+    ul
+      height 38px
+      li
+        a
+          color white
+          padding 0.25em 0.75em
+          transition()
+          &:hover
+            background-color white
+            color rgba(black, 0.8)
+
+
+
+
+// HOME
+img
+  &.desaturate
+    // -webkit-filter grayscale(100%)
+    // filter: grayscale(100%)
+  &.left
+    margin-right 0.5em
+  &.right
+    margin-left 0.5em
+
+
+
+
+.MarkupPagerNav
+  border-top 1px solid rgba(white, 0.3)
+  margin 1em auto
+  padding 2em
+  width 70%
+  text-align center
+
+.MarkupPagerNav li
+  display inline
+  list-style none
+  margin 0
+
+
+.MarkupPagerNav li a,
+.MarkupPagerNav li.MarkupPagerNavSeparator
+  display inline-block
+  padding 2px 9px
+  margin-right 3px
+  font-size 12px
+  font-weight bold
+  text-transform uppercase
+  width 60p
+
+
+.MarkupPagerNav li.MarkupPagerNavOn a,
+.MarkupPagerNav li a:hover
+  background-color rgba(white, 0.3)
+  color #fff
+  text-decoration none
+
+
+.MarkupPagerNav li.MarkupPagerNavSeparator
+  display inline
+  color #777
+  background #d2e4ea
+  padding-left 3px
+  padding-right 3px
+
+
+
+
+
+.playlists-list.list-unstyled 
+  li
+    background-color rgba(white, 0.1)
+    display inline-block
+    margin-bottom 10px
+    padding 10px
+    width 100%
+    a, h3
+      color white
+      &:hover
+        color darken(color-blue, 60%)
+    img
+      border 1px solid rgba(0,0,0,0.2)
+      width 100%
+    p
+      color rgba(white, 0.75)
+
+
+
+
+
+// PLAYLISTS
+.playlist-header
+  clearfix()
+
+
+.playlist-container
+  clearfix()
+
+.playlist.list-unstyled
+  background-color rgba(black, 0.15)
+  box-shadow 0px 0px 6px 1px rgba(black,0.4)
+  padding 2em
+  
+  li
+    background-color rgba(color-gray, 0.4)
+    color rgba(white, 0.6)
+    margin-bottom 1px
+    padding 1em
+    transition()
+    &.playing
+      background-color rgba(color-gray, 0.6)
+      box-shadow 1px 1px 20px 5px rgba(black, 0.3)
+      a
+        color white
+    a
+      color rgba(black, 0.8)
+      display block
+      transition()
+      &:hover
+        color white
+        padding-left 0.5em
+
+
+
+.playlist-title
+  color color-gray
+  font-size(50)
+  font-family "Oswald", sans-serif
+  font-weight bold
+  line-height 50
+  margin-top 0.25em
+  span
+    font-size(18)
+    letter-spacing 1px
+  &:after
+    display block
+    content ''
+    background-color rgba(white, 0.5)
+    width 100%
+    height 5px
+
+.home, .basic-page
+  .playlist-title
+    text-shadow 0px -6px 10px rgba(50,50,50,0.2)
+
+
+
+
+// PLAYER
+
+.audiojs audio
+    left -1px
+    position absolute
+
+
+.audiojs 
+  background rgba(black, 0.5)
+  box-shadow 1px 1px 8px rgba(black, 0.3)
+  font-family: monospace;
+  font-size(12)
+  height 70px
+  overflow hidden
+  width 100%
+
+  .play-pause
+    border-right 1px solid rgba(color-gray, 0.4)
+    float left
+    height 70px
+    margin 0
+    overflow hidden
+    padding 23px 6px
+    width 10%
+
+  p
+    cursor pointer
+    display none
+    height 30px
+    margin 0
+    width 25px
+
+  .play
+    display block
+
+  .scrubber
+    background rgba(white, 0.4)
+    border-bottom 0 none
+    border-left 0 none
+    float left
+    height 1.5em
+    margin 28px 10px
+    overflow hidden
+    position relative
+    width 40%
+
+  .progress
+    background -moz-linear-gradient(center top , #CCCCCC 0%, #DDDDDD 50%, #CCCCCC 51%, #CCCCCC 100%) repeat scroll 0 0 #CCCCCC
+    height 14px
+    left 0
+    position absolute
+    top 0
+    width 0
+    z-index 1
+
+  .loaded
+    background rgba(black, 0.5)
+    height 14px
+    left 0
+    position absolute
+    top 0
+    width 0
+
+  .time
+    border-left 1px solid rgba(color-gray, 0.4)
+    color #DDDDDD
+    float left
+    height 76px
+    line-height 73px
+    margin 0 0 0 6px
+    padding 18px 0 0 22px
+    text-shadow 1px 1px 0 rgba(0, 0, 0, 0.5)
+    width 10%
+
+    em
+      color #F9F9F9
+      font-style normal
+      padding 0 2px 0 0
+
+    strong
+      font-weight normal
+      padding 0 0 0 2px
+
+  .error-message
+    color #FFFFFF
+    display none
+    float left
+    height 36px
+    line-height 36px
+    margin 0 10px
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+    width 400px
+
+    a
+    border-bottom 1px solid #999999
+    color #EEEEEE
+    padding-bottom 1px
+    text-decoration none
+
+  .play
+    background url("../js/player-graphics.gif") no-repeat scroll -2px -1px transparent
+    margin-left: -5px
+
+  .loading
+    background: url("../js/player-graphics.gif") no-repeat scroll -2px -31px transparent
+    margin-left: -5px
+
+  .error
+    background: url("../js/player-graphics.gif") no-repeat scroll -2px -61px transparent
+    margin-left: -5px
+
+  .pause
+    background: url("../js/player-graphics.gif") no-repeat scroll -2px -91px transparent
+    margin-left: -5px
+
+.playing .play, .playing .loading, .playing .error
+  display: none;
+
+.playing .pause
+  display: block;
+
+.loading .play, .loading .pause, .loading .error
+  display: none;
+
+.loading .loading
+  display: block;
+
+.error .time, .error .play, .error .pause, .error .scrubber, .error .loading
+  display: none;
+
+.error .error
+  display: block;
+
+.error .play-pause p
+  cursor: auto;
+
+.error .error-message
+  display: block;
+
+
+
+
+
+
+
+/* ADMIN PANEL */
+.close-button
+  color color-base
+  position absolute
+  right 10px
+  top 2px
+  font-size(20)
+  padding 5px
+
+#admin-panel
+  background #fff
+  position fixed
+  top 0
+  left 110%
+  box-shadow -16px 6px 13px rgba(0,0,0,0.4)
+  height 100vh
+  overflow scroll
+  right 0
+  transition all 0.75s ease
+
+  &.editing
+    left 0
+    z-index 2
+    +above(480px)
+      left 30%
+  
+
+
+.overlay
+  transition all 0.75s ease
+  background rgba(255,255,255,0)
+
+  &.show 
+    position fixed
+    width 100%
+    height 100%
+    left 0
+    top 0
+    z-index 1
+    background rgba(255,255,255,0.8)
+  
+
+  &.hide
+    z-index -1
+    background rgba(255,255,255,0)
+  
+/* Iframe
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#modal-iframe
+  width 100%
+  height 100%
+
+
+
+
+
+
+
+
+/* LOGIN FORM */
+.login-container
+  padding 0.5em
+
+  form
+    margin 0 auto
+    width 60%
+    
+    p
+      margin 3em 0
+
+    input[type="text"],
+    input[type="password"]
+      background-color transparent
+      color white
+      border none
+      border-bottom 1px solid #fff
+      height auto
+      padding 0.75em
+      width 100%
+      &:focus
+        outline none
+    
+    input::-webkit-input-placeholder
+      color rgba(white, 0.6) !important
+       
+    input:-moz-placeholder /* Firefox 18- */
+      color rgba(white, 0.6) !important
+     
+    input::-moz-placeholder  /* Firefox 19+ */
+      color rgba(white, 0.6) !important
+     
+    input:-ms-input-placeholder  
+      color rgba(white, 0.6) !important
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+.page-footer
+  border-top 1px solid rgba(white, 0.75)
+  color rgba(white, 0.75)
+  margin-top 10em
+  padding 2em 0

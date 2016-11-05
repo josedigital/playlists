@@ -1,0 +1,27 @@
+/*	--------------------------------------------------
+	:: Variables
+	-------------------------------------------------- */
+/* text shadow - define everything */
+/* text shadow - 1px, 1px, 0, define only color */
+/* Main Colors */
+/*grays*/
+/* Font Sizes */
+/* Tabs */
+/* Forms */
+/* form elemnts width */
+/* Opacity */
+/* Rounded Corners + Border Radius */
+/* Gradients */
+/* Animations */
+/* Drop shadows */
+/* Clearfix for clearing floats like a boss */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
